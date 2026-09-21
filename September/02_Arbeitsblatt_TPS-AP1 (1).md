@@ -44,7 +44,7 @@ Es soll eine Klasse **`ShippingCalculator`** erstellt werden, die die Berechnung
 
 | Attribut | Bedeutung | Wert |
 |---|---|---|
-| `maxWeight` | Maximales Gewicht eines Pakets (kg) | **31,5** |
+| `maxWeight` | Maximales Gewicht eines Pakets (kg) | **31,5 ** |
 | `expressSurcharge` | Zuschlag für Express-Sendung (€) | **12,95** |
 | `upTo10kg` | Preis für ein Paket bis 10 kg (€) | **13,98** |
 | `above10kg` | Preis für ein Paket über 10 kg (€) | **18,95** |
