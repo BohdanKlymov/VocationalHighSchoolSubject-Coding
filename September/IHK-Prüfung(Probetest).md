@@ -33,8 +33,8 @@ Die Versandsoftware kann **objektorientiert** oder **prozedural** programmiert w
 
 > Hinweis (wie in der echten Prüfung): Es werden nur die **ersten zwei** genannten Vorteile bewertet.
 
-1. Bessere Struktur und dadurch einfaches Verständnis/Lessbarer 
-2. Man kann die Programme leichter erweitern
+1. Bessere Strukturierung und dadurch bessere Verständlichkeit 
+2. Einfachere Erweiterbarkeit des Programms.
 
 ---
 
@@ -123,10 +123,13 @@ Die Versandinformationen sollen in einer **Datenbank** gespeichert werden. Dafü
                 │  Artikelname       │                 │  LKW-Kennzeichen   │
                 │  Einzelgewicht     │                 │  LKW-Typ           │
                 └────────────────────┘                 └────────────────────┘
-                        │                                       │
-                        └──────────────  ?  ────────────────────┘
-                           (Beziehung benennen + Attribute
-                            der Beziehung eintragen)
+                        │n                                   m│  
+                        |                                     |  n:m heißt viele zu viele
+                        └────────────    Verladen:     ───────┘
+                                    Menge pro Artikel
+                                        Verladezeit
+                            (Beziehung benennen + Attribute
+                                der Beziehung eintragen)
 ```
 
 **Skizzenfläche** (eigene Zeichnung):
@@ -151,12 +154,12 @@ Die Klasse `ShippingCalculator` soll folgende Attribute besitzen (alle `private`
 ```
 ┌──────────────────────────────────────────┐
 │                                          │
-│   «Klasse»  ________________________     │
+│   «Klasse»  ShippingCalculation          │
 │                                          │
-│   - ________________ : ________________  │
-│   - ________________ : ________________  │
-│   - ________________ : ________________  │
-│   - ________________ : ________________  │
+│   - maxWeight : double                   │
+│   - expressSurcharge : double            │
+│   - upTo10kg : double                    │
+│   - above10kg : double                   │
 │                                          │
 │   + calculateShippingCost(packages:      │
 │       List<Package>): double             │
@@ -170,8 +173,8 @@ Die Klasse `ShippingCalculator` soll folgende Attribute besitzen (alle `private`
 
 | Frage | Meine Antwort |
 |---|---|
-| Das konnte ich schon ohne Hilfe | |
+| Das konnte ich schon ohne Hilfe | Aufgabe 1 und 2|
 | Das habe ich von meinem Partner/meiner Partnerin gelernt | |
-| Das will ich in diesem Halbjahr lernen/üben | |
+| Das will ich in diesem Halbjahr lernen/üben | Aufgabe 3|
 
 **Portfolio-Hinweis:** Dieses Blatt ist dein **erstes Arbeitsprodukt** im LF5-Portfolio. Hefte es ab — am Ende des Halbjahres zeigst du damit, wie du dich entwickelt hast.
